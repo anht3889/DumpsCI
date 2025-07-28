@@ -65,10 +65,6 @@ jobs:
          working-directory: DumprX
          run: |
               $EXTRA_CMD
-              pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-X626B -r EUX -i 351973960214248 download -v X626BXXU3AYF5/X626BOXM3AYF5/X626BXXU3AYF5/X626BXXU3AYF5 -O .
-              samloader -m SM-X626B -r EUX -i 351973960214248 decrypt -v X626BXXU3AYF5/X626BOXM3AYF5/X626BXXU3AYF5/X626BXXU3AYF5 -i $(ls *.enc*) -o firmware.zip
-              rm $(ls *.enc*)
 
        - name: Start Dumping
          working-directory: DumprX
