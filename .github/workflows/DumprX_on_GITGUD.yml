@@ -65,6 +65,10 @@ jobs:
          working-directory: DumprX
          run: |
               $EXTRA_CMD
+              pip3 install git+https://github.com/martinetd/samloader.git
+              samloader -m SM-E366B -r INS -i 351235010360839 download -v E366BXXU1AYF1/E366BODM1AYF1/E366BXXU1AYF1/E366BXXU1AYF1 -O .
+              samloader -m SM-E366B -r INS -i 351235010360839 decrypt -v E366BXXU1AYF1/E366BODM1AYF1/E366BXXU1AYF1/E366BXXU1AYF1 -i $(ls *.enc*) -o firmware.zip
+              rm $(ls *.enc*)
 
        - name: Start Dumping
          working-directory: DumprX
