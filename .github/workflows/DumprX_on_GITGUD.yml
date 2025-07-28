@@ -66,8 +66,8 @@ jobs:
          run: |
               $EXTRA_CMD
               pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-E366B -r INS -i 351235010360839 download -v E366BXXU1AYF1/E366BODM1AYF1/E366BXXU1AYF1/E366BXXU1AYF1 -O .
-              samloader -m SM-E366B -r INS -i 351235010360839 decrypt -v E366BXXU1AYF1/E366BODM1AYF1/E366BXXU1AYF1/E366BXXU1AYF1 -i $(ls *.enc*) -o firmware.zip
+              samloader -m SM-X526B -r EUX -i 356160461234561 download -v X526BXXU3AYF5/X526BOXM3AYF5/X526BXXU3AYF5/X526BXXU3AYF5 -O .
+              samloader -m SM-X526B -r EUX -i 356160461234561 decrypt -v X526BXXU3AYF5/X526BOXM3AYF5/X526BXXU3AYF5/X526BXXU3AYF5 -i $(ls *.enc*) -o firmware.zip
               rm $(ls *.enc*)
 
        - name: Start Dumping
