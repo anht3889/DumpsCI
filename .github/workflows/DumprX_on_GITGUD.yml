@@ -65,10 +65,6 @@ jobs:
          working-directory: DumprX
          run: |
               $EXTRA_CMD
-              pip3 install git+https://github.com/martinetd/samloader.git
-              samloader -m SM-G766B -r EUX -i 353243600579550 download -v G766BXXS2AYH2/G766BOXM2AYH2/G766BXXS2AYH2/G766BXXS2AYH2 -O .
-              samloader -m SM-G766B -r EUX -i 353243600579550 decrypt -v G766BXXS2AYH2/G766BOXM2AYH2/G766BXXS2AYH2/G766BXXS2AYH2 -i $(ls *.enc*) -o firmware.zip
-              rm $(ls *.enc*)
 
        - name: Start Dumping
          working-directory: DumprX
