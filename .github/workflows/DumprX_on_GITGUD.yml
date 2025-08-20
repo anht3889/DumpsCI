@@ -65,6 +65,8 @@ jobs:
          working-directory: DumprX
          run: |
               $EXTRA_CMD
+              pip install gdown
+              gdown 1uTMmYM1xLjJkPxjmalxzWhGp4duC51l2
 
        - name: Start Dumping
          working-directory: DumprX
